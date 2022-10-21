@@ -1,4 +1,4 @@
-window.adsbygoogle = window.adsbygoogle || [];
+window.adsbygoogle = [];
 const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
 adConfig({
     preloadAdBreaks: 'on',
@@ -7,9 +7,8 @@ adConfig({
         console.log("ready");
     }, // Called when API has initialised and adBreak() is ready
 });
-function showNextAd()
-{
-    console.log("showNextAd")
+function showNextAd() {
+    /*console.log("showNextAd")
     adBreak({
         type: 'next', // ad shows at start of next level
         name: 'next-game',
@@ -28,15 +27,14 @@ function showNextAd()
             console.log(placementInfo.breakFormat);
             console.log(placementInfo.breakStatus);
         },
-    });
+    });*/
+    console.log("No ad code");
 }
 
-function passBeforeAdData()
-{
+function passBeforeAdData() {
     myGameInstance.SendMessage('Canvas', 'pauseGame');
 }
 
-function adBreakDoneData()
-{
+function adBreakDoneData() {
     myGameInstance.SendMessage('Canvas', 'resumeGame');
 }
